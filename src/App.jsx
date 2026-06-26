@@ -11,16 +11,55 @@ const navItems = [
 
 const highlights = [
   {
-    title: 'Handwerk',
-    text: 'Brote von Hand gemacht, mit Ruhe, Erfahrung und dem Gefühl für den richtigen Moment.',
-  },
-  {
     title: 'Regionalität',
-    text: 'Zutaten aus der Region geben jedem Brot und Gebäck einen ehrlichen, natürlichen Charakter.',
+    text: 'Unsere Zutaten stammen aus der Region, von Partnerinnen und Partnern, denen wir vertrauen.',
   },
   {
     title: 'Nachhaltigkeit',
-    text: 'Bewusst wirtschaften, Ressourcen schonen und Verantwortung übernehmen, aus Überzeugung.',
+    text: 'Von Solaranlagen über kurze Lieferwege bis zum Guten von Gestern übernehmen wir Verantwortung.',
+  },
+  {
+    title: 'Bio',
+    text: 'Unsere Brote entstehen mit Sorgfalt, Zeit für Teigruhe, Reifung und besten Zutaten in Bio-Qualität.',
+  },
+  {
+    title: 'Handwerk',
+    text: 'Was wir tun, tun wir mit der Hand und mit dem Herzen, mit Erfahrung, Ruhe und echtem Können.',
+  },
+  {
+    title: 'Familienbetrieb',
+    text: 'Seit vier Generationen backen wir für die Menschen in unserer Region und für das, was Brot verbindet.',
+  },
+];
+
+const aboutHistory = [
+  {
+    year: 'Heute',
+    title: 'Handwerk in neuer Generation',
+    text: 'Doris und Karl führen das Unternehmen mit Herz, Haltung und Blick auf die Tradition. Die nächste Generation bringt bereits neue Perspektiven ein.',
+    image:
+      'https://www.wiesender.de/wp-content/uploads/2025/07/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-67.webp',
+  },
+  {
+    year: '2000er',
+    title: 'Wandel & Wachstum',
+    text: 'Der Neubau bringt mehr Raum, bessere Abläufe und neue Möglichkeiten, ohne die traditionellen Herstellungsverfahren aus dem Blick zu verlieren.',
+    image:
+      'https://www.wiesender.de/wp-content/uploads/2025/08/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-59.webp',
+  },
+  {
+    year: '1993',
+    title: 'Die vierte Generation übernimmt',
+    text: 'Über Jahrzehnte wird gebacken, gelernt und weitergegeben. Aus Rezepten werden Routinen, aus Kunden werden Freunde.',
+    image:
+      'https://www.wiesender.de/wp-content/uploads/2025/07/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-09.webp',
+  },
+  {
+    year: '1904',
+    title: 'Wie alles begann',
+    text: 'Alles beginnt in einer kleinen Backstube in Euernbach. Ein Holzofen, ein paar gute Rezepte und das Vertrauen der Nachbarschaft, mehr braucht es damals nicht.',
+    image:
+      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-archiv2.webp',
   },
 ];
 
@@ -167,8 +206,8 @@ const stationGroups = [
         hours: ['Mo - Sa: 06:30 - 18:00 Uhr', 'So: 07:30 - 18:00 Uhr'],
       },
       {
-        name: 'Tültorstraße',
-        address: 'Tültorstraße 4, 85276 Pfaffenhofen a. d. Ilm',
+        name: 'Türltorstraße',
+        address: 'Türltorstraße 4, 85276 Pfaffenhofen a. d. Ilm',
         phone: '+49 (0) 84 41 / 803 390',
         hours: ['Mo - Sa: 06:00 - 18:00 Uhr', 'So: 07:30 - 18:00 Uhr'],
       },
@@ -306,15 +345,102 @@ const getMapUrl = (address) =>
 
 const productCategoryImages = {
   brote:
-    'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=82',
+    'https://www.wiesender.de/wp-content/uploads/2025/05/naturbackstube-wiesender-baeckerei-brot-semmeln-bio-regional-pfaffenhofen-009.webp',
   semmeln:
-    'https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=900&q=82',
+    'https://www.wiesender.de/wp-content/uploads/2025/08/naturbackstube-wiesender-baeckerei-brot-semmeln-bio-regional-pfaffenhofen-039-682x1024.webp',
   feingebaeck:
-    'https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?auto=format&fit=crop&w=900&q=82',
+    'https://www.wiesender.de/wp-content/uploads/2025/08/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-50-1024x683.webp',
   lebkuchen:
-    'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=82',
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-die-Lisl-1024x1024.webp',
   snacks:
-    'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=82',
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-leberkaesesemmel-1024x1024.webp',
+};
+
+const productImagesByTitle = {
+  Laugenzöpferl:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-laugenzoepferl-1024x1024.webp',
+  Breze:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-breze-1024x1024.webp',
+  'Dinkel-Handling':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Dinkel-Handling-weiss-1024x1024.webp',
+  Kürbiskernsemmel:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kuerbiskernsemmel-1024x1024.webp',
+  Kärtner:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kaerntner-semmel-1024x1024.webp',
+  Roggi:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-roggi-1024x1024.webp',
+  Bauernsemmel:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bauernsemmel-1024x1024.webp',
+  Knopfsemmel:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-knopfsemmel-1024x1024.webp',
+  Sesamsemmel:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-sesamsemmel-1024x1024.webp',
+  Mohnsemmel:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-mohnsemmel-1024x1024.webp',
+  'Schoko-Croissant':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-schoko-croissant-1024x1024.webp',
+  'Butter-Croissant':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-butter-croissant-1024x1024.webp',
+  'Laugen-Croissant':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-laugen-croissant-1024x1024.webp',
+  Marillenkrapfen:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-marillenkrapfen-1024x1024.webp',
+  Kirschtasche:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kirschtasche-1024x1024.webp',
+  Quarktasche:
+    'https://www.wiesender.de/wp-content/uploads/2026/04/Quarktasche-neu-1-1024x1024.png',
+  Donut:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-donut-1024x1024.webp',
+  Nussschnecke:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-nussschnecke-1024x1024.webp',
+  'Die Lisl-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-die-Lisl-1024x1024.webp',
+  'Himbeer-Schoko-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Himbeer-Schoko-Lisl-1024x1024.webp',
+  'Bratapfel-Zimt-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bratapfel-zimt-lisl-1024x1024.webp',
+  'Walnuss-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-walnuss-lisl-1024x1024.webp',
+  'Pistazien-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Pistazien-Lisl-1024x1024.webp',
+  'Karamell-Krokant-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Karamell-Krokant-Lisl-1024x1024.webp',
+  'Rum-Trüffel-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-rum-trueffel-lisl-1024x1024.webp',
+  'Kokos-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kokos-lisl-1024x1024.webp',
+  'Eierlikör-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Eierlikoer-Lisl-1024x1024.webp',
+  'Haselnuss-Nougat-Lisl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Haselnuss-Nougat-Lisl-1024x1024.webp',
+  'Lisl-Mischungen':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-lisl-mischung-verpackt-1024x1024.webp',
+  'Lisl-Spitzen':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-lisl-spitzen-1024x1024.webp',
+  'Leberkäse-Semmel':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-leberkaesesemmel-1024x1024.webp',
+  'Salami-Semmel':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-salamisemmel-1024x1024.webp',
+  'Käse-Bauernsemmel':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bauernkaesesemmel-1024x1024.webp',
+  'Scharfer Italiener':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-scharfer-taliener-1024x1024.webp',
+  Rosmarinkruste:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-rosmarin-schinken-krusti-1024x1024.webp',
+  'Frischkäse Roggi':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-frischkaese-roggi-1024x1024.webp',
+  'Omlette-Weckerl':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-omelette-weckerl-1024x1024.webp',
+  Butterbreze:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-butterbreze-1024x1024.webp',
+  'Scharfe Breze':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-scharfe-breze-1024x1024.webp',
+  Schlemmerbreze:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-schlemmerbreze-1024x1024.webp',
+  Käsebreze:
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kaesebreze-1024x1024.webp',
+  'Käse-Croissant':
+    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kaese-croissant-1024x1024.webp',
 };
 
 const productCategories = [
@@ -852,14 +978,58 @@ function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeView, setActiveView] = useState('home');
   const [productFilter, setProductFilter] = useState('all');
+  const [productSearch, setProductSearch] = useState('');
+  const [stationQuery, setStationQuery] = useState('');
+
+  const normalizedProductSearch = productSearch.trim().toLowerCase();
+  const normalizedStationQuery = stationQuery.trim().toLowerCase();
 
   const visibleProducts = useMemo(() => {
-    if (productFilter !== 'all') {
-      return productPageItems.filter((product) => (product.category ?? 'brote') === productFilter);
+    return productPageItems.filter((product) => {
+      const productCategory = product.category ?? 'brote';
+      const matchesCategory = productFilter === 'all' || productCategory === productFilter;
+
+      if (!matchesCategory) {
+        return false;
+      }
+
+      if (!normalizedProductSearch) {
+        return true;
+      }
+
+      return [
+        product.title,
+        product.subtitle,
+        product.description,
+        product.badge,
+        productCategoryMeta[productCategory]?.label,
+      ]
+        .filter(Boolean)
+        .some((value) => value.toLowerCase().includes(normalizedProductSearch));
+    });
+  }, [normalizedProductSearch, productFilter]);
+
+  const filteredStationGroups = useMemo(() => {
+    if (!normalizedStationQuery) {
+      return stationGroups;
     }
 
-    return productPageItems;
-  }, [productFilter]);
+    return stationGroups
+      .map((group) => ({
+        ...group,
+        stations: group.stations.filter((station) =>
+          [group.city, station.name, station.address, station.phone, ...station.hours].some(
+            (value) => value.toLowerCase().includes(normalizedStationQuery)
+          )
+        ),
+      }))
+      .filter((group) => group.stations.length > 0);
+  }, [normalizedStationQuery]);
+
+  const visibleStationCount = filteredStationGroups.reduce(
+    (total, group) => total + group.stations.length,
+    0
+  );
 
   const activeProductCategory = productCategoryMeta[productFilter] ?? productCategoryMeta.all;
 
@@ -970,12 +1140,27 @@ function App() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3 rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-sm font-semibold text-[#263126]">
-                    {visibleProducts.length} Produkte
-                  </p>
-                  <p className="text-sm text-[#526258]">Nach Kategorie filtern.</p>
+              <div className="flex flex-col gap-4 rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-4 shadow-sm">
+                <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+                  <div>
+                    <p className="text-sm font-semibold text-[#263126]">
+                      {visibleProducts.length} Produkte
+                    </p>
+                    <p className="text-sm text-[#526258]">Nach Kategorie und Suchbegriff filtern.</p>
+                  </div>
+                  <div className="w-full lg:max-w-xs">
+                    <label className="sr-only" htmlFor="product-search">
+                      Produkte suchen
+                    </label>
+                    <input
+                      id="product-search"
+                      type="search"
+                      value={productSearch}
+                      onChange={(event) => setProductSearch(event.target.value)}
+                      placeholder="Produkte suchen"
+                      className="w-full rounded-lg border border-[#d7c7ad] bg-[#f5efe4] px-4 py-2 text-sm font-medium text-[#263126] outline-none transition placeholder:text-[#8a7962] focus:border-[#17456a] focus:ring-2 focus:ring-[#17456a]/20"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {productCategories.map(({ value, label }) => (
@@ -998,40 +1183,65 @@ function App() {
             </div>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {visibleProducts.map((product) => (
-                <article
-                  key={product.title}
-                  className="group overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="flex h-60 items-center justify-center overflow-hidden bg-[#f0e5d2]">
-                    <img
-                      src={product.image ?? productCategoryImages[product.category ?? 'brote']}
-                      alt={product.title}
-                      width="600"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      className={`h-full w-full transition duration-300 group-hover:scale-105 ${
-                        product.category ? 'object-cover' : 'object-contain p-5'
-                      }`}
-                    />
-                  </div>
-                  <div className="p-5">
-                    <span
-                      className={`inline-flex rounded-lg px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
-                        product.isBio || product.badge === 'Saisonal'
-                          ? 'bg-[#17456a] text-white'
-                          : 'border border-[#d7c7ad] bg-[#f5efe4] text-[#526258]'
-                      }`}
+              {visibleProducts.length > 0 ? (
+                visibleProducts.map((product) => {
+                  const productCategory = product.category ?? 'brote';
+                  const fallbackImage = productCategoryImages[productCategory];
+                  const exactProductImage = productImagesByTitle[product.title] ?? product.image;
+                  const productImage = exactProductImage ?? fallbackImage;
+                  const usesCategoryFallback = !exactProductImage;
+
+                  return (
+                    <article
+                      key={product.title}
+                      className="group overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                     >
-                      {product.badge ?? productCategoryMeta[product.category ?? 'brote'].label}
-                    </span>
-                    <h2 className="mt-4 text-xl font-semibold text-[#263126]">{product.title}</h2>
-                    <p className="mt-2 text-sm font-semibold text-[#17456a]">{product.subtitle}</p>
-                    <p className="mt-3 text-sm leading-6 text-[#526258]">{product.description}</p>
-                  </div>
-                </article>
-              ))}
+                      <div className="flex h-60 items-center justify-center overflow-hidden bg-[#f0e5d2]">
+                        <img
+                          src={productImage}
+                          alt={product.title}
+                          width="600"
+                          height="600"
+                          loading="lazy"
+                          decoding="async"
+                          className={`h-full w-full transition duration-300 group-hover:scale-105 ${
+                            usesCategoryFallback && product.category
+                              ? 'object-cover'
+                              : 'object-contain p-5'
+                          }`}
+                        />
+                      </div>
+                      <div className="p-5">
+                        <span
+                          className={`inline-flex rounded-lg px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
+                            product.isBio || product.badge === 'Saisonal'
+                              ? 'bg-[#17456a] text-white'
+                              : 'border border-[#d7c7ad] bg-[#f5efe4] text-[#526258]'
+                          }`}
+                        >
+                          {product.badge ?? productCategoryMeta[productCategory].label}
+                        </span>
+                        <h2 className="mt-4 text-xl font-semibold text-[#263126]">
+                          {product.title}
+                        </h2>
+                        <p className="mt-2 text-sm font-semibold text-[#17456a]">
+                          {product.subtitle}
+                        </p>
+                        <p className="mt-3 text-sm leading-6 text-[#526258]">
+                          {product.description}
+                        </p>
+                      </div>
+                    </article>
+                  );
+                })
+              ) : (
+                <div className="rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-8 text-center sm:col-span-2 xl:col-span-3">
+                  <p className="text-lg font-semibold text-[#263126]">Keine Produkte gefunden.</p>
+                  <p className="mt-2 text-sm text-[#526258]">
+                    Ändere den Suchbegriff oder wähle eine andere Kategorie.
+                  </p>
+                </div>
+              )}
             </div>
           </section>
         ) : activeView === 'career' ? (
@@ -1260,17 +1470,34 @@ function App() {
                 </p>
                 <div className="mt-4 grid gap-3 sm:grid-cols-3">
                   <div>
-                    <p className="text-3xl font-semibold text-[#263126]">{stationCount}</p>
-                    <p className="text-sm text-[#526258]">Stationen</p>
+                    <p className="text-3xl font-semibold text-[#263126]">{visibleStationCount}</p>
+                    <p className="text-sm text-[#526258]">
+                      {normalizedStationQuery ? `von ${stationCount} Stationen` : 'Stationen'}
+                    </p>
                   </div>
                   <div>
-                    <p className="text-3xl font-semibold text-[#263126]">{stationGroups.length}</p>
+                    <p className="text-3xl font-semibold text-[#263126]">
+                      {filteredStationGroups.length}
+                    </p>
                     <p className="text-sm text-[#526258]">Regionen</p>
                   </div>
                   <div>
                     <p className="text-3xl font-semibold text-[#263126]">1</p>
                     <p className="text-sm text-[#526258]">Zentrale</p>
                   </div>
+                </div>
+                <div className="mt-5">
+                  <label className="sr-only" htmlFor="station-search">
+                    Filialen suchen
+                  </label>
+                  <input
+                    id="station-search"
+                    type="search"
+                    value={stationQuery}
+                    onChange={(event) => setStationQuery(event.target.value)}
+                    placeholder="Ort, Straße oder Filiale suchen"
+                    className="w-full rounded-lg border border-[#d7c7ad] bg-[#f5efe4] px-4 py-2 text-sm font-medium text-[#263126] outline-none transition placeholder:text-[#8a7962] focus:border-[#17456a] focus:ring-2 focus:ring-[#17456a]/20"
+                  />
                 </div>
               </div>
             </div>
@@ -1305,72 +1532,81 @@ function App() {
             </article>
 
             <div className="mt-10 space-y-10">
-              {stationGroups.map((group) => (
-                <section key={group.city} aria-labelledby={`${group.city}-stations`}>
-                  <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#17456a]">
-                        Region
-                      </p>
-                      <h2 id={`${group.city}-stations`} className="text-3xl font-semibold text-[#263126]">
-                        {group.city}
-                      </h2>
+              {filteredStationGroups.length > 0 ? (
+                filteredStationGroups.map((group) => (
+                  <section key={group.city} aria-labelledby={`${group.city}-stations`}>
+                    <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                      <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#17456a]">
+                          Region
+                        </p>
+                        <h2 id={`${group.city}-stations`} className="text-3xl font-semibold text-[#263126]">
+                          {group.city}
+                        </h2>
+                      </div>
+                      <span className="w-fit rounded-lg border border-[#d7c7ad] bg-[#fffaf1] px-3 py-2 text-sm font-semibold text-[#526258]">
+                        {group.stations.length} Stationen
+                      </span>
                     </div>
-                    <span className="w-fit rounded-lg border border-[#d7c7ad] bg-[#fffaf1] px-3 py-2 text-sm font-semibold text-[#526258]">
-                      {group.stations.length} Stationen
-                    </span>
-                  </div>
 
-                  <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    {group.stations.map((station) => (
-                      <article
-                        key={`${group.city}-${station.name}`}
-                        className="flex min-h-72 flex-col rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                      >
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#17456a]">
-                              {group.city}
-                            </p>
-                            <h3 className="mt-2 text-xl font-semibold text-[#263126]">{station.name}</h3>
-                          </div>
-                          <span className="rounded-lg bg-[#f5efe4] px-3 py-1 text-xs font-semibold text-[#526258]">
-                            Filiale
-                          </span>
-                        </div>
-
-                        <div className="mt-5 space-y-4 text-sm leading-6 text-[#526258]">
-                          <div>
-                            <p className="font-semibold text-[#263126]">Adresse</p>
-                            <p>{station.address}</p>
-                          </div>
-                          <div>
-                            <p className="font-semibold text-[#263126]">Telefon</p>
-                            <a className="transition hover:text-[#17456a]" href={`tel:${station.phone.replace(/[^\d+]/g, '')}`}>
-                              {station.phone}
-                            </a>
-                          </div>
-                          <div>
-                            <p className="font-semibold text-[#263126]">Öffnungszeiten</p>
-                            {station.hours.map((line) => (
-                              <p key={line}>{line}</p>
-                            ))}
-                          </div>
-                        </div>
-
-                        <a
-                          href={getMapUrl(station.address)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="mt-auto inline-flex w-fit rounded-lg bg-[#17456a] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#24577c] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#17456a]/30 active:scale-[0.98]"
+                    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                      {group.stations.map((station) => (
+                        <article
+                          key={`${group.city}-${station.name}`}
+                          className="flex min-h-72 flex-col rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                         >
-                          In Google Maps öffnen
-                        </a>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              ))}
+                          <div className="flex items-start justify-between gap-4">
+                            <div>
+                              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#17456a]">
+                                {group.city}
+                              </p>
+                              <h3 className="mt-2 text-xl font-semibold text-[#263126]">{station.name}</h3>
+                            </div>
+                            <span className="rounded-lg bg-[#f5efe4] px-3 py-1 text-xs font-semibold text-[#526258]">
+                              Filiale
+                            </span>
+                          </div>
+
+                          <div className="mt-5 space-y-4 text-sm leading-6 text-[#526258]">
+                            <div>
+                              <p className="font-semibold text-[#263126]">Adresse</p>
+                              <p>{station.address}</p>
+                            </div>
+                            <div>
+                              <p className="font-semibold text-[#263126]">Telefon</p>
+                              <a className="transition hover:text-[#17456a]" href={`tel:${station.phone.replace(/[^\d+]/g, '')}`}>
+                                {station.phone}
+                              </a>
+                            </div>
+                            <div>
+                              <p className="font-semibold text-[#263126]">Öffnungszeiten</p>
+                              {station.hours.map((line) => (
+                                <p key={line}>{line}</p>
+                              ))}
+                            </div>
+                          </div>
+
+                          <a
+                            href={getMapUrl(station.address)}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-auto inline-flex w-fit rounded-lg bg-[#17456a] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#24577c] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#17456a]/30 active:scale-[0.98]"
+                          >
+                            In Google Maps öffnen
+                          </a>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                ))
+              ) : (
+                <div className="rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-8 text-center">
+                  <p className="text-lg font-semibold text-[#263126]">Keine Filialen gefunden.</p>
+                  <p className="mt-2 text-sm text-[#526258]">
+                    Suche nach einem anderen Ort, einer Straße oder einer Filiale.
+                  </p>
+                </div>
+              )}
             </div>
           </section>
         ) : (
@@ -1469,27 +1705,93 @@ function App() {
             </section>
 
             <section id="about" className="border-y border-[#d7c7ad] bg-[#fffaf1]">
-              <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#17456a]">
-                    Über Wiesender
-                  </p>
-                  <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#263126] sm:text-4xl">
-                    Eine Backstube für Menschen, die echtes Brot schätzen.
-                  </h2>
-                  <p className="mt-5 text-base leading-8 text-[#526258]">
-                    Wiesender steht für ehrliche Rezepturen, sorgfältige Prozesse und
-                    ein Sortiment, das Tradition und zeitgemäße Ernährung zusammenbringt.
-                  </p>
+              <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+                <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#17456a]">
+                      Über uns
+                    </p>
+                    <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#263126] sm:text-4xl">
+                      Wie aus Teig Tradition wurde.
+                    </h2>
+                    <p className="mt-5 text-base leading-8 text-[#526258]">
+                      Seit über 120 Jahren backt Wiesender mit Hingabe, Leidenschaft und
+                      der nötigen Zeit. Aus dieser Haltung entstehen echtes Handwerk,
+                      echte Verantwortung und ein Stück vom guten Leben.
+                    </p>
+                  </div>
+
+                  <figure className="rounded-lg border border-[#d7c7ad] bg-[#f5efe4] p-6 shadow-sm">
+                    <blockquote className="text-3xl font-semibold leading-tight text-[#263126] sm:text-4xl">
+                      &ldquo;Die Zeit zur Geschmacks- und Teigentwicklung kann durch nichts
+                      ersetzt werden.&rdquo;
+                    </blockquote>
+                    <figcaption className="mt-5 text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
+                      Karls Urgroßvater
+                    </figcaption>
+                  </figure>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-3">
+                <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                   {highlights.map((item) => (
                     <article key={item.title} className="rounded-lg border border-[#d7c7ad] bg-[#f5efe4] p-5">
                       <h3 className="text-lg font-semibold text-[#263126]">{item.title}</h3>
                       <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
                     </article>
                   ))}
+                </div>
+
+                <div className="mt-14 grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:items-start">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#17456a]">
+                      Unsere Geschichte
+                    </p>
+                    <h3 className="mt-3 text-3xl font-semibold leading-tight text-[#263126] sm:text-4xl">
+                      Vom Holzofen zur Naturbackstube.
+                    </h3>
+                    <p className="mt-5 text-base leading-8 text-[#526258]">
+                      Die Geschichte bleibt nah am Brot: Rezepte, Sauerteig, Handarbeit
+                      und die Menschen, die Wiesender weitertragen.
+                    </p>
+                  </div>
+
+                  <div className="grid gap-4">
+                    {aboutHistory.map((item) => (
+                      <article
+                        key={item.title}
+                        className="grid overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm md:grid-cols-[0.95fr_1.05fr]"
+                      >
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          width="900"
+                          height="560"
+                          loading="lazy"
+                          decoding="async"
+                          className="relative z-0 h-64 w-full object-cover md:h-full"
+                        />
+                        <div className="relative z-10 flex min-h-[220px] flex-col justify-center border-t border-[#d7c7ad] bg-[#fffaf1] p-5 md:border-l md:border-t-0 md:p-6">
+                          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
+                            {item.year}
+                          </p>
+                          <h4 className="mt-3 text-xl font-semibold text-[#263126]">
+                            {item.title}
+                          </h4>
+                          <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-14 border-t border-[#d7c7ad] pt-8">
+                  <h3 className="text-3xl font-semibold leading-tight text-[#263126] sm:text-4xl">
+                    Ein Stück vom guten Leben für alle.
+                  </h3>
+                  <p className="mt-4 max-w-3xl text-base leading-8 text-[#526258]">
+                    Seit 1904 geben wir unser Bestes für gutes Brot und für die
+                    Menschen, die es kaufen, backen und lieben.
+                  </p>
                 </div>
               </div>
             </section>
