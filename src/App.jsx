@@ -805,6 +805,15 @@ const slides = [
   },
 ];
 
+function BlankImageFrame({ className = '' }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`overflow-hidden rounded-lg border border-[#d7c7ad] bg-[linear-gradient(135deg,#eadcc4_0%,#d3c5ad_55%,#909682_100%)] ${className}`}
+    />
+  );
+}
+
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeView, setActiveView] = useState('home');
@@ -1027,6 +1036,9 @@ function App() {
                       key={product.title}
                       className="group overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                     >
+                      <div className="p-3 pb-0">
+                        <BlankImageFrame className="h-44" />
+                      </div>
                       <div className="p-5">
                         <div className="flex flex-wrap gap-2">
                           {productBadges.map((badge) => (
@@ -1450,7 +1462,8 @@ function App() {
                 </div>
 
                 <div className="relative min-h-[520px] overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#e6d7be] shadow-lg">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#263126]/70 via-[#263126]/15 to-transparent" />
+                  <BlankImageFrame className="absolute inset-0 rounded-none border-0" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#263126]/70 via-[#263126]/15 to-transparent" />
                   <div className="absolute left-5 right-5 top-5 flex items-center justify-between">
                     <span className="rounded-lg bg-[#fffaf1]/95 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#17456a]">
                       {slides[activeSlide].label}
@@ -1584,15 +1597,20 @@ function App() {
                     {aboutHistory.map((item) => (
                       <article
                         key={item.title}
-                        className="rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-5 shadow-sm md:p-6"
+                        className="overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm"
                       >
-                        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
-                          {item.year}
-                        </p>
-                        <h4 className="mt-3 text-xl font-semibold text-[#263126]">
-                          {item.title}
-                        </h4>
-                        <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
+                        <div className="p-3 pb-0">
+                          <BlankImageFrame className="h-48" />
+                        </div>
+                        <div className="p-5 md:p-6">
+                          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
+                            {item.year}
+                          </p>
+                          <h4 className="mt-3 text-xl font-semibold text-[#263126]">
+                            {item.title}
+                          </h4>
+                          <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
+                        </div>
                       </article>
                     ))}
                   </div>
@@ -1623,9 +1641,14 @@ function App() {
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                   {productTeasers.map(([title, text]) => (
-                    <article key={title} className="rounded-lg border border-[#d7c7ad] bg-[#f5efe4] p-5">
-                      <h3 className="text-xl font-semibold text-[#263126]">{title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-[#526258]">{text}</p>
+                    <article key={title} className="overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#f5efe4]">
+                      <div className="p-3 pb-0">
+                        <BlankImageFrame className="h-36" />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="text-xl font-semibold text-[#263126]">{title}</h3>
+                        <p className="mt-3 text-sm leading-6 text-[#526258]">{text}</p>
+                      </div>
                     </article>
                   ))}
                 </div>
