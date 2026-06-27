@@ -37,29 +37,21 @@ const aboutHistory = [
     year: 'Heute',
     title: 'Handwerk in neuer Generation',
     text: 'Doris und Karl führen das Unternehmen mit Herz, Haltung und Blick auf die Tradition. Die nächste Generation bringt bereits neue Perspektiven ein.',
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-67.webp',
   },
   {
     year: '2000er',
     title: 'Wandel & Wachstum',
     text: 'Der Neubau bringt mehr Raum, bessere Abläufe und neue Möglichkeiten, ohne die traditionellen Herstellungsverfahren aus dem Blick zu verlieren.',
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/08/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-59.webp',
   },
   {
     year: '1993',
     title: 'Die vierte Generation übernimmt',
     text: 'Über Jahrzehnte wird gebacken, gelernt und weitergegeben. Aus Rezepten werden Routinen, aus Kunden werden Freunde.',
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-09.webp',
   },
   {
     year: '1904',
     title: 'Wie alles begann',
     text: 'Alles beginnt in einer kleinen Backstube in Euernbach. Ein Holzofen, ein paar gute Rezepte und das Vertrauen der Nachbarschaft, mehr braucht es damals nicht.',
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-archiv2.webp',
   },
 ];
 
@@ -74,8 +66,9 @@ const productTeasers = [
 const newsItems = [
   {
     eyebrow: 'Neu im Sortiment',
-    title: 'BIO Protein Sauerteigbrot',
-    text: 'Kräftiger Geschmack, ausgewählte Zutaten und ein sättigendes Sauerteig-Erlebnis.',
+    title: 'BIO-Protein Sauerteigbrot',
+    text:
+      'Ab 16.06. im Sortiment mit 13,32% Proteinen, 3,28% Ballaststoffen, Bio-Mehlen aus dem Kloster Scheyern, ohne Backhefe und hauseigenem Bio-Sauerteig.',
   },
   {
     eyebrow: 'Aktuelles Angebot',
@@ -164,18 +157,12 @@ const careerTestimonials = [
 
 const careerGallery = [
   {
-    image:
-      'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=900&q=82',
     title: 'Verkauf & Beratung',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=82',
     title: 'Backstube & Handwerk',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1523294587484-bae6cc870010?auto=format&fit=crop&w=900&q=82',
     title: 'Team & Alltag',
   },
 ];
@@ -343,106 +330,6 @@ const stationCount = stationGroups.reduce((total, group) => total + group.statio
 const getMapUrl = (address) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
-const productCategoryImages = {
-  brote:
-    'https://www.wiesender.de/wp-content/uploads/2025/05/naturbackstube-wiesender-baeckerei-brot-semmeln-bio-regional-pfaffenhofen-009.webp',
-  semmeln:
-    'https://www.wiesender.de/wp-content/uploads/2025/08/naturbackstube-wiesender-baeckerei-brot-semmeln-bio-regional-pfaffenhofen-039-682x1024.webp',
-  feingebaeck:
-    'https://www.wiesender.de/wp-content/uploads/2025/08/wiesender-baeckerei-pfaffenhofen-moosburg-freising-naturbackstube-handwerk-50-1024x683.webp',
-  lebkuchen:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-die-Lisl-1024x1024.webp',
-  snacks:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-leberkaesesemmel-1024x1024.webp',
-};
-
-const productImagesByTitle = {
-  Laugenzöpferl:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-laugenzoepferl-1024x1024.webp',
-  Breze:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-breze-1024x1024.webp',
-  'Dinkel-Handling':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Dinkel-Handling-weiss-1024x1024.webp',
-  Kürbiskernsemmel:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kuerbiskernsemmel-1024x1024.webp',
-  Kärtner:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kaerntner-semmel-1024x1024.webp',
-  Roggi:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-roggi-1024x1024.webp',
-  Bauernsemmel:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bauernsemmel-1024x1024.webp',
-  Knopfsemmel:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-knopfsemmel-1024x1024.webp',
-  Sesamsemmel:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-sesamsemmel-1024x1024.webp',
-  Mohnsemmel:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-mohnsemmel-1024x1024.webp',
-  'Schoko-Croissant':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-schoko-croissant-1024x1024.webp',
-  'Butter-Croissant':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-butter-croissant-1024x1024.webp',
-  'Laugen-Croissant':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-laugen-croissant-1024x1024.webp',
-  Marillenkrapfen:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-marillenkrapfen-1024x1024.webp',
-  Kirschtasche:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kirschtasche-1024x1024.webp',
-  Quarktasche:
-    'https://www.wiesender.de/wp-content/uploads/2026/04/Quarktasche-neu-1-1024x1024.png',
-  Donut:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-donut-1024x1024.webp',
-  Nussschnecke:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-nussschnecke-1024x1024.webp',
-  'Die Lisl-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-die-Lisl-1024x1024.webp',
-  'Himbeer-Schoko-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Himbeer-Schoko-Lisl-1024x1024.webp',
-  'Bratapfel-Zimt-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bratapfel-zimt-lisl-1024x1024.webp',
-  'Walnuss-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-walnuss-lisl-1024x1024.webp',
-  'Pistazien-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Pistazien-Lisl-1024x1024.webp',
-  'Karamell-Krokant-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Karamell-Krokant-Lisl-1024x1024.webp',
-  'Rum-Trüffel-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-rum-trueffel-lisl-1024x1024.webp',
-  'Kokos-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kokos-lisl-1024x1024.webp',
-  'Eierlikör-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Eierlikoer-Lisl-1024x1024.webp',
-  'Haselnuss-Nougat-Lisl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Haselnuss-Nougat-Lisl-1024x1024.webp',
-  'Lisl-Mischungen':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-lisl-mischung-verpackt-1024x1024.webp',
-  'Lisl-Spitzen':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-lisl-spitzen-1024x1024.webp',
-  'Leberkäse-Semmel':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-leberkaesesemmel-1024x1024.webp',
-  'Salami-Semmel':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-salamisemmel-1024x1024.webp',
-  'Käse-Bauernsemmel':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bauernkaesesemmel-1024x1024.webp',
-  'Scharfer Italiener':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-scharfer-taliener-1024x1024.webp',
-  Rosmarinkruste:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-rosmarin-schinken-krusti-1024x1024.webp',
-  'Frischkäse Roggi':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-frischkaese-roggi-1024x1024.webp',
-  'Omlette-Weckerl':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-omelette-weckerl-1024x1024.webp',
-  Butterbreze:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-butterbreze-1024x1024.webp',
-  'Scharfe Breze':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-scharfe-breze-1024x1024.webp',
-  Schlemmerbreze:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-schlemmerbreze-1024x1024.webp',
-  Käsebreze:
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kaesebreze-1024x1024.webp',
-  'Käse-Croissant':
-    'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-kaese-croissant-1024x1024.webp',
-};
-
 const productCategories = [
   {
     value: 'all',
@@ -491,7 +378,18 @@ const productCategoryMeta = Object.fromEntries(
   productCategories.map((category) => [category.value, category])
 );
 
+const newProduct = {
+  category: 'brote',
+  title: 'BIO-Protein Sauerteigbrot',
+  subtitle: 'Ab 16.06. im Sortiment.',
+  description:
+    'Mit 13,32% Proteinen, 3,28% Ballaststoffen, Bio-Mehlen aus dem Kloster Scheyern, ohne Backhefe und unserem hauseigenen Bio-Sauerteig.',
+  badge: 'New',
+  isBio: true,
+};
+
 const productPageItems = [
+  newProduct,
   {
     title: 'BIO-Klosterlaib',
     subtitle: '3 Pfund Bio.',
@@ -499,8 +397,6 @@ const productPageItems = [
       '80% BIO-Roggenmehl, 20% BIO-Weizenmehl, BIO-Sauerteig, Wasser, BIO-Hefe, Steinsalz und hauseigene BIO-Gewürzrezeptur.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-klosterlaib-1024x1024.webp',
   },
   {
     title: 'BIO-Roggenmischbrot',
@@ -509,8 +405,6 @@ const productPageItems = [
       '60% BIO-Roggenmehl, 40% BIO-Weizenmehl, hauseigener BIO-Sauerteig, Wasser, BIO-Hefe, Steinsalz und feine BIO-Brotgewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Roggenmischbrot-300x300.webp',
   },
   {
     title: 'BIO-Dinkelsaatenbrot',
@@ -519,8 +413,6 @@ const productPageItems = [
       '100% BIO-Dinkelweizenmehl, Steinsalz, BIO-Leinsaaten, BIO-Hefe und BIO-Apfelessig.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-dinkelsaatenbrot-300x300.webp',
   },
   {
     title: 'BIO-Craft-Bierbrot',
@@ -529,8 +421,6 @@ const productPageItems = [
       'BIO-Weizenmehl, BIO-Roggenmehl, hauseigener BIO-Biersauerteig, BIO-Quark, Kartoffelflocken, Steinsalz und Gewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-craftbierbrot-300x300.webp',
   },
   {
     title: 'BIO-Bauer',
@@ -539,8 +429,6 @@ const productPageItems = [
       'BIO-Roggenmehl, BIO-Weizenmehl, hauseigener BIO-Sauerteig, BIO-Hefe, Steinsalz und feine BIO-Brotgewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bauer-300x300.webp',
   },
   {
     title: 'BIO-Baguette',
@@ -548,8 +436,6 @@ const productPageItems = [
     description: '100% BIO-Weizenmehl, Wasser, BIO-Hefe und Steinsalz.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-Ofenbaguette-300x300.webp',
   },
   {
     title: 'BIO-Kornrad',
@@ -558,8 +444,6 @@ const productPageItems = [
       'BIO-Weizenvollkornmehl, BIO-Roggenvollkornmehl, Sauerteig, Dinkelschrot, Ölsaaten, Walnüsse, Malz und Gewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2026/05/Bio-Kornrad-1-300x300.png',
   },
   {
     title: 'BIO-Ilmtaler',
@@ -568,8 +452,6 @@ const productPageItems = [
       'BIO-Roggenmehl, BIO-Weizenmehl, hauseigener BIO-Sauerteig, Hefe, Steinsalz und feine BIO-Brotgewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/10/BIO-Ilmtaler-300x300.png',
   },
   {
     title: 'BIO-Sonnenblumenbrot',
@@ -578,8 +460,6 @@ const productPageItems = [
       'BIO-Roggenmehl, BIO-Weizenmehl, Sauerteig, geröstete BIO-Sonnenblumenkerne, BIO-Hefe, Steinsalz und Gewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/10/BIO-Sonnblumenbrot-300x300.png',
   },
   {
     title: 'BIO-Bratkartoffelbrot',
@@ -588,8 +468,6 @@ const productPageItems = [
       'BIO-Weizenmehl, BIO-Roggenmehl, extra große BIO-Kartoffelstücke, Sauerteig, BIO-Hefe, Steinsalz und Gewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-bratkartoffelbrot-300x300.webp',
   },
   {
     title: 'BIO-Finnenbrot',
@@ -598,8 +476,6 @@ const productPageItems = [
       'BIO-Roggenmehl, BIO-Weizenmehl, Sauerteig, Weizenschrot, Roggenschrot, Ölsaaten, Malz, Hefe und Gewürze.',
     badge: 'Bio',
     isBio: true,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-finnenbrot-300x300.webp',
   },
   {
     title: 'Steinofenkruste',
@@ -607,8 +483,6 @@ const productPageItems = [
     description: 'Weizenmehl, Sauerteig, Wasser, Hefe und Steinsalz.',
     badge: 'Classic',
     isBio: false,
-    image:
-      'https://www.wiesender.de/wp-content/uploads/2025/07/naturbackstube-wiesender-steinofenkruste-300x300.webp',
   },
   {
     category: 'semmeln',
@@ -616,7 +490,6 @@ const productPageItems = [
     subtitle: 'Mit Liebe von Hand geflochten.',
     description: 'Weizenmehl, Wasser, Salz, Weizenmalzmehl, Rapsöl, Hefe, Roggenmehl und Palmfett.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -624,7 +497,6 @@ const productPageItems = [
     subtitle: 'Mit Liebe von Hand gedreht.',
     description: 'Weizenmehl, Wasser, Salz, Weizenmalzmehl, Rapsöl, Hefe, Roggenmehl und Palmfett.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -632,7 +504,6 @@ const productPageItems = [
     subtitle: '100% Dinkel.',
     description: 'Bio-Dinkelweizenmehl, Wasser, Kartoffelflocken, Salz, Hefe, Dinkelmalzmehl und Honig.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -641,7 +512,6 @@ const productPageItems = [
     description:
       'Mit Roggenvollkornschrot, Bio-Sauerteig, Saaten, Kürbiskernen, Haferflocken und Kartoffelflocken.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -650,7 +520,6 @@ const productPageItems = [
     description:
       'Weizenmehl, Wasser, Weizenvollkornschrot, Backleinsamen, Dinkelgrieß, Hefe, Salz, Bio-Kümmel und Sauerteig.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -658,7 +527,6 @@ const productPageItems = [
     subtitle: 'Voll im Geschmack.',
     description: 'Weizenmehl, Wasser, Roggenmehl, Röstzwiebeln, Sesam, Kürbiskerne, Hefe und Salz.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -666,7 +534,6 @@ const productPageItems = [
     subtitle: 'Rösch und frisch.',
     description: 'Weizenmehl, Wasser, Malzmehl, Traubenzucker, Weizengrieß, Roggenmehl und Weizensauerteig.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -674,7 +541,6 @@ const productPageItems = [
     subtitle: 'Klassisch und knusprig.',
     description: 'Weizenmehl, Wasser, Roggenmehl, Malzmehl, Hefe, Speisesalz und Rapsöl.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -682,7 +548,6 @@ const productPageItems = [
     subtitle: 'Sesam pur.',
     description: 'Klassische Semmel mit Weizensauerteig und Sesam für einen nussigen Biss.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'semmeln',
@@ -690,7 +555,6 @@ const productPageItems = [
     subtitle: 'Mohn satt.',
     description: 'Klassische Semmel mit Weizensauerteig und reichlich Mohn auf goldbrauner Kruste.',
     badge: 'Semmel',
-    image: productCategoryImages.semmeln,
   },
   {
     category: 'feingebaeck',
@@ -698,7 +562,6 @@ const productPageItems = [
     subtitle: 'Knusprig, schokoladig, gut.',
     description: 'Weizenmehl, Butter, Wasser und Schokoladencreme für eine feine süße Auszeit.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -706,7 +569,6 @@ const productPageItems = [
     subtitle: 'Buttrig. Blättrig. Klassiker.',
     description: 'Weizenmehl, Butter, Wasser, Hefe, Zucker und Vollmischpulver.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -714,7 +576,6 @@ const productPageItems = [
     subtitle: 'Croissant auf bayerisch.',
     description: 'Butter-Croissant mit Lauge und Sesam, herzhaft interpretiert.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -722,7 +583,6 @@ const productPageItems = [
     subtitle: 'Nicht nur zu Fasching ein Genuss.',
     description: 'Goldbrauner Krapfen mit Marillenfüllung und Puderzucker.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -730,7 +590,6 @@ const productPageItems = [
     subtitle: 'Sauerkirsch küsst Mandel.',
     description: 'Blättriges Gebäck mit Sauerkirschen, Mandeln, Butter und Zimt.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -738,7 +597,6 @@ const productPageItems = [
     subtitle: 'Klassisch gefaltet. Fein gefüllt.',
     description: 'Fein gefülltes Plundergebäck mit Quark, Zucker, Vollei, Butter und Hefe.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -746,7 +604,6 @@ const productPageItems = [
     subtitle: 'Von Hand geformt.',
     description: 'Süßes Handgebäck mit Fondant, Vollei und Hefe.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'feingebaeck',
@@ -754,7 +611,6 @@ const productPageItems = [
     subtitle: 'Eingedreht und voller Nuss.',
     description: 'Mit Haselnuss, Zimt, Kakao, Haselnusspaste und feinem Aroma.',
     badge: 'Feingebäck',
-    image: productCategoryImages.feingebaeck,
   },
   {
     category: 'lebkuchen',
@@ -762,7 +618,6 @@ const productPageItems = [
     subtitle: 'Der Lisl Klassiker.',
     description: 'Marzipan, geröstete Mandeln, Orangeat, Zitronat, Bio-Dinkelmehl, Gewürze und Zartbitter-Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -770,7 +625,6 @@ const productPageItems = [
     subtitle: 'Fruchtig und schokoladig.',
     description: 'Lisl-Lebkuchen mit Himbeermark, Himbeer-Crisp, Vanille und Zartbitter-Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -778,7 +632,6 @@ const productPageItems = [
     subtitle: 'Winterlich fein.',
     description: 'Mit Apfelsaft, Zimt, Zartbitter-Schokolade und weißer Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -786,7 +639,6 @@ const productPageItems = [
     subtitle: 'Nussig und kräftig.',
     description: 'Marzipan, geröstete Mandeln, Walnüsse, Gewürze und Zartbitter-Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -794,7 +646,6 @@ const productPageItems = [
     subtitle: 'Fein mit Pistazie.',
     description: 'Lisl-Lebkuchen mit Pistazien und Vollmilch-Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -802,7 +653,6 @@ const productPageItems = [
     subtitle: 'Süß, knackig, rund.',
     description: 'Mit Karamell, Mandelkrokant, Vollmilch-Schokolade und Zartbitter-Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -810,7 +660,6 @@ const productPageItems = [
     subtitle: 'Aromatisch und cremig.',
     description: 'Mit Rumpaste, Trüffelmasse, Vollmilch-Schokolade und weißer Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -818,7 +667,6 @@ const productPageItems = [
     subtitle: 'Hell, süß und kokosfein.',
     description: 'Mit Kokosraspeln, Kokosmark, Bio-Dinkelmehl, Gewürzen und weißer Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -826,7 +674,6 @@ const productPageItems = [
     subtitle: 'Cremig und festlich.',
     description: 'Mit Eierlikör, weißer Schokolade und Zartbitter-Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -834,7 +681,6 @@ const productPageItems = [
     subtitle: 'Nougat trifft Nuss.',
     description: 'Mit Haselnüssen, Mandeln, Nougat, Sahne, Gewürzen und weißer Schokolade.',
     badge: 'Saisonal',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -842,7 +688,6 @@ const productPageItems = [
     subtitle: 'Für alle, die sich nicht entscheiden möchten.',
     description: 'Verschiedene Lisl-Sorten bereits als Mischung gepackt.',
     badge: 'Online',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'lebkuchen',
@@ -850,7 +695,6 @@ const productPageItems = [
     subtitle: 'Zum Probieren und Teilen.',
     description: 'Eine Auswahl verschiedener Lisl-Sorten für alle, die Vielfalt möchten.',
     badge: 'Online',
-    image: productCategoryImages.lebkuchen,
   },
   {
     category: 'snacks',
@@ -858,7 +702,6 @@ const productPageItems = [
     subtitle: 'Bayerisch in der Semmel.',
     description: 'Bauernsemmel, Butter, Leberkäse und Essiggurke.',
     badge: 'Snack',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -866,7 +709,6 @@ const productPageItems = [
     subtitle: 'Herzhaft auf die Hand.',
     description: 'Bauernsemmel, Butter, Salami und Essiggurke.',
     badge: 'Snack',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -874,7 +716,6 @@ const productPageItems = [
     subtitle: 'Für Käsefans mit Gemüseambition.',
     description: 'Bauernsemmel, Butter, Gouda, Tomate und Gurke.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -882,7 +723,6 @@ const productPageItems = [
     subtitle: 'Mediterran und scharf.',
     description: 'Dinkelhandling, Basilikumcreme, Tomaten, Mozzarella und Rucola.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -890,7 +730,6 @@ const productPageItems = [
     subtitle: 'Würzig trifft zart.',
     description: 'Dinkelhandling, Frischkäse, Schinken und Salat.',
     badge: 'Snack',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -898,7 +737,6 @@ const productPageItems = [
     subtitle: 'Leicht und voller Geschmack.',
     description: 'Roggi, Frischkäse, Gurke und Tomaten.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -906,7 +744,6 @@ const productPageItems = [
     subtitle: 'Frühstück zum Mitnehmen.',
     description: 'Bauernsemmel, Butter, Omlette, Gurke, Kresse und optional Speck.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -914,7 +751,6 @@ const productPageItems = [
     subtitle: 'Butter. Breze. Mehr braucht’s nicht.',
     description: 'Breze und Butter.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -922,7 +758,6 @@ const productPageItems = [
     subtitle: 'Breze mit Wumms.',
     description: 'Breze mit Pfeffer.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -930,7 +765,6 @@ const productPageItems = [
     subtitle: 'Extra belegt. Extra gut.',
     description: 'Breze, Käse und Salami.',
     badge: 'Snack',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -938,7 +772,6 @@ const productPageItems = [
     subtitle: 'Breze plus Käse gleich Glück.',
     description: 'Breze mit Käse überbacken.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
   {
     category: 'snacks',
@@ -946,28 +779,26 @@ const productPageItems = [
     subtitle: 'Für Käseliebhaber mit Stil.',
     description: 'Croissant mit Butter, Hefe, Vollmischpulver und Käse.',
     badge: 'Vegetarisch',
-    image: productCategoryImages.snacks,
   },
 ];
 
 const slides = [
   {
-    image:
-      'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=82',
+    title: newProduct.title,
+    text: newProduct.subtitle,
+    label: newProduct.badge,
+  },
+  {
     title: 'Frisch gebacken heute',
     text: 'Brot, Semmeln und saisonale Spezialitäten mit ehrlicher Handwerksqualität.',
     label: 'Heute',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=1400&q=82',
     title: 'Feines aus der Backstube',
     text: 'Süße und deftige Klassiker, sorgfältig gebacken und schön präsentiert.',
     label: 'Gebäck',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1400&q=82',
     title: 'Backstube in Aktion',
     text: 'Jeden Tag entsteht aus Mehl, Wasser, Zeit und Erfahrung etwas Besonderes.',
     label: 'Handwerk',
@@ -1186,50 +1017,44 @@ function App() {
               {visibleProducts.length > 0 ? (
                 visibleProducts.map((product) => {
                   const productCategory = product.category ?? 'brote';
-                  const fallbackImage = productCategoryImages[productCategory];
-                  const exactProductImage = productImagesByTitle[product.title] ?? product.image;
-                  const productImage = exactProductImage ?? fallbackImage;
-                  const usesCategoryFallback = !exactProductImage;
+                  const productBadges = [
+                    product.badge ?? productCategoryMeta[productCategory].label,
+                    ...(product.isBio && product.badge !== 'Bio' ? ['Bio'] : []),
+                  ].filter(Boolean);
 
                   return (
                     <article
                       key={product.title}
                       className="group overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                     >
-                      <div className="flex h-60 items-center justify-center overflow-hidden bg-[#f0e5d2]">
-                        <img
-                          src={productImage}
-                          alt={product.title}
-                          width="600"
-                          height="600"
-                          loading="lazy"
-                          decoding="async"
-                          className={`h-full w-full transition duration-300 group-hover:scale-105 ${
-                            usesCategoryFallback && product.category
-                              ? 'object-cover'
-                              : 'object-contain p-5'
-                          }`}
-                        />
-                      </div>
                       <div className="p-5">
-                        <span
-                          className={`inline-flex rounded-lg px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
-                            product.isBio || product.badge === 'Saisonal'
-                              ? 'bg-[#17456a] text-white'
-                              : 'border border-[#d7c7ad] bg-[#f5efe4] text-[#526258]'
-                          }`}
-                        >
-                          {product.badge ?? productCategoryMeta[productCategory].label}
-                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {productBadges.map((badge) => (
+                            <span
+                              key={badge}
+                              className={`inline-flex rounded-lg px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
+                                product.isBio || badge === 'Saisonal'
+                                  ? 'bg-[#17456a] text-white'
+                                  : 'border border-[#d7c7ad] bg-[#f5efe4] text-[#526258]'
+                              }`}
+                            >
+                              {badge}
+                            </span>
+                          ))}
+                        </div>
                         <h2 className="mt-4 text-xl font-semibold text-[#263126]">
                           {product.title}
                         </h2>
-                        <p className="mt-2 text-sm font-semibold text-[#17456a]">
-                          {product.subtitle}
-                        </p>
-                        <p className="mt-3 text-sm leading-6 text-[#526258]">
-                          {product.description}
-                        </p>
+                        {product.subtitle ? (
+                          <p className="mt-2 text-sm font-semibold text-[#17456a]">
+                            {product.subtitle}
+                          </p>
+                        ) : null}
+                        {product.description ? (
+                          <p className="mt-3 text-sm leading-6 text-[#526258]">
+                            {product.description}
+                          </p>
+                        ) : null}
                       </div>
                     </article>
                   );
@@ -1289,24 +1114,13 @@ function App() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="relative min-h-[440px] overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#e6d7be] shadow-lg sm:col-span-2">
-                  <img
-                    src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1400&q=82"
-                    alt="Bäckerei-Team bei der Arbeit"
-                    width="1400"
-                    height="900"
-                    decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#263126]/75 via-[#263126]/15 to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5 rounded-lg bg-[#fffaf1]/95 p-5 shadow-sm backdrop-blur">
-                    <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
-                      Wiesi-Crew
-                    </p>
-                    <p className="mt-2 text-xl font-semibold text-[#263126]">
-                      Ein Team, das Handwerk, Alltag und Entwicklung zusammenbringt.
-                    </p>
-                  </div>
+                <div className="rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-6 shadow-sm sm:col-span-2">
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
+                    Wiesi-Crew
+                  </p>
+                  <p className="mt-2 text-xl font-semibold text-[#263126]">
+                    Ein Team, das Handwerk, Alltag und Entwicklung zusammenbringt.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1401,17 +1215,8 @@ function App() {
                 </div>
                 <div className="grid gap-4 sm:grid-cols-3">
                   {careerGallery.map((item) => (
-                    <article key={item.title} className="overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        width="900"
-                        height="700"
-                        loading="lazy"
-                        decoding="async"
-                        className="h-56 w-full object-cover"
-                      />
-                      <p className="p-4 text-sm font-semibold text-[#263126]">{item.title}</p>
+                    <article key={item.title} className="rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-5 shadow-sm">
+                      <p className="text-sm font-semibold text-[#263126]">{item.title}</p>
                     </article>
                   ))}
                 </div>
@@ -1586,14 +1391,16 @@ function App() {
                             </div>
                           </div>
 
-                          <a
-                            href={getMapUrl(station.address)}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="mt-auto inline-flex w-fit rounded-lg bg-[#17456a] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#24577c] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#17456a]/30 active:scale-[0.98]"
-                          >
-                            In Google Maps öffnen
-                          </a>
+                          <div className="mt-auto pt-6">
+                            <a
+                              href={getMapUrl(station.address)}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex w-fit rounded-lg bg-[#17456a] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#24577c] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#17456a]/30 active:scale-[0.98]"
+                            >
+                              In Google Maps öffnen
+                            </a>
+                          </div>
                         </article>
                       ))}
                     </div>
@@ -1628,23 +1435,6 @@ function App() {
                     regionale Zutaten und moderne Ideen für echte Genussmomente.
                   </p>
 
-                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <button
-                      type="button"
-                      onClick={openProducts}
-                      className="rounded-lg bg-[#17456a] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#24577c] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#17456a]/30 active:scale-[0.98]"
-                    >
-                      Sortiment ansehen
-                    </button>
-                    <button
-                      type="button"
-                      onClick={openContact}
-                      className="rounded-lg border border-[#17456a]/30 bg-[#fffaf1] px-5 py-3 text-sm font-semibold text-[#17456a] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#eadcc4] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#17456a]/30 active:scale-[0.98]"
-                    >
-                      Kontakt aufnehmen
-                    </button>
-                  </div>
-
                   <div className="mt-10 grid gap-3 sm:grid-cols-3">
                     {[
                       ['Bio', 'Zutaten mit Herkunft'],
@@ -1660,14 +1450,6 @@ function App() {
                 </div>
 
                 <div className="relative min-h-[520px] overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#e6d7be] shadow-lg">
-                  <img
-                    src={slides[activeSlide].image}
-                    alt={slides[activeSlide].title}
-                    width="1400"
-                    height="900"
-                    decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover transition duration-700"
-                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#263126]/70 via-[#263126]/15 to-transparent" />
                   <div className="absolute left-5 right-5 top-5 flex items-center justify-between">
                     <span className="rounded-lg bg-[#fffaf1]/95 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#17456a]">
@@ -1682,9 +1464,11 @@ function App() {
                       <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#17456a]">
                         {slides[activeSlide].title}
                       </p>
-                      <p className="mt-2 text-xl font-semibold text-[#263126]">
-                        {slides[activeSlide].text}
-                      </p>
+                      {slides[activeSlide].text ? (
+                        <p className="mt-2 text-xl font-semibold text-[#263126]">
+                          {slides[activeSlide].text}
+                        </p>
+                      ) : null}
                     </div>
                     <div className="mt-4 flex gap-2">
                       {slides.map((slide, index) => (
@@ -1700,6 +1484,38 @@ function App() {
                       ))}
                     </div>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="news" className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+              <div className="grid gap-8 rounded-lg bg-[#17456a] p-6 text-white shadow-sm lg:grid-cols-[0.8fr_1.2fr] lg:p-8">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#f0d7aa]">
+                    Aktuell
+                  </p>
+                  <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
+                    Frische Highlights und Angebote aus der Backstube.
+                  </h2>
+                  <button
+                    type="button"
+                    onClick={openProducts}
+                    className="mt-6 rounded-lg border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40 active:scale-[0.98]"
+                  >
+                    Produkte entdecken
+                  </button>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  {newsItems.map((item) => (
+                    <article key={item.title} className="rounded-lg bg-[#fffaf1] p-5 text-[#263126]">
+                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
+                        {item.eyebrow}
+                      </p>
+                      <h3 className="mt-3 text-xl font-semibold">{item.title}</h3>
+                      <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
+                    </article>
+                  ))}
                 </div>
               </div>
             </section>
@@ -1753,78 +1569,35 @@ function App() {
                       Die Geschichte bleibt nah am Brot: Rezepte, Sauerteig, Handarbeit
                       und die Menschen, die Wiesender weitertragen.
                     </p>
+                    <div className="mt-8 border-t border-[#d7c7ad] pt-6">
+                      <h4 className="text-2xl font-semibold leading-tight text-[#263126]">
+                        Ein Stück vom guten Leben für alle.
+                      </h4>
+                      <p className="mt-4 text-base leading-8 text-[#526258]">
+                        Seit 1904 geben wir unser Bestes für gutes Brot und für die
+                        Menschen, die es kaufen, backen und lieben.
+                      </p>
+                    </div>
                   </div>
 
                   <div className="grid gap-4">
                     {aboutHistory.map((item) => (
                       <article
                         key={item.title}
-                        className="grid overflow-hidden rounded-lg border border-[#d7c7ad] bg-[#fffaf1] shadow-sm md:grid-cols-[0.95fr_1.05fr]"
+                        className="rounded-lg border border-[#d7c7ad] bg-[#fffaf1] p-5 shadow-sm md:p-6"
                       >
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          width="900"
-                          height="560"
-                          loading="lazy"
-                          decoding="async"
-                          className="relative z-0 h-64 w-full object-cover md:h-full"
-                        />
-                        <div className="relative z-10 flex min-h-[220px] flex-col justify-center border-t border-[#d7c7ad] bg-[#fffaf1] p-5 md:border-l md:border-t-0 md:p-6">
-                          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
-                            {item.year}
-                          </p>
-                          <h4 className="mt-3 text-xl font-semibold text-[#263126]">
-                            {item.title}
-                          </h4>
-                          <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
-                        </div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
+                          {item.year}
+                        </p>
+                        <h4 className="mt-3 text-xl font-semibold text-[#263126]">
+                          {item.title}
+                        </h4>
+                        <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
                       </article>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-14 border-t border-[#d7c7ad] pt-8">
-                  <h3 className="text-3xl font-semibold leading-tight text-[#263126] sm:text-4xl">
-                    Ein Stück vom guten Leben für alle.
-                  </h3>
-                  <p className="mt-4 max-w-3xl text-base leading-8 text-[#526258]">
-                    Seit 1904 geben wir unser Bestes für gutes Brot und für die
-                    Menschen, die es kaufen, backen und lieben.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section id="news" className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
-              <div className="grid gap-8 rounded-lg bg-[#17456a] p-6 text-white shadow-sm lg:grid-cols-[0.8fr_1.2fr] lg:p-8">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#f0d7aa]">
-                    Aktuell
-                  </p>
-                  <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
-                    Frische Highlights und Angebote aus der Backstube.
-                  </h2>
-                  <button
-                    type="button"
-                    onClick={openProducts}
-                    className="mt-6 rounded-lg border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40 active:scale-[0.98]"
-                  >
-                    Produkte entdecken
-                  </button>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2">
-                  {newsItems.map((item) => (
-                    <article key={item.title} className="rounded-lg bg-[#fffaf1] p-5 text-[#263126]">
-                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#17456a]">
-                        {item.eyebrow}
-                      </p>
-                      <h3 className="mt-3 text-xl font-semibold">{item.title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-[#526258]">{item.text}</p>
-                    </article>
-                  ))}
-                </div>
               </div>
             </section>
 
@@ -1909,13 +1682,6 @@ function App() {
                     Einstieg
                   </p>
                   <p className="mt-3 text-2xl font-semibold">Ausbildung, Verkauf und Backstube</p>
-                  <button
-                    type="button"
-                    onClick={openCareer}
-                    className="mt-6 rounded-lg bg-[#f0d7aa] px-5 py-3 text-sm font-semibold text-[#263126] transition hover:-translate-y-0.5 hover:bg-[#ffe4b4] focus:outline-none focus:ring-2 focus:ring-white/40 active:scale-[0.98]"
-                  >
-                    Interesse melden
-                  </button>
                 </div>
               </div>
             </section>
